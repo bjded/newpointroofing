@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
+.row {
+  padding: 1rem;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.3);
+  z-index: 1;
+}
+
+.overlay > * {
+  position: relative;
+  z-index: 2;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  border: 1px solid hsl(39, 52%, 64%);
+  background-color: hsl(39, 52%, 64%);
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 1px solid hsl(39, 52%, 64%);
+  background-color: hsl(60, 5%, 19%);
+  color: #fff;
+}
+
+nav {
+  z-index: 9999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 0 0;
+  background-color: hsl(60, 5%, 19%);
+  box-shadow: 0 2px 5px rgba(18, 18, 18, 0.3);
+}
+nav .nav-logo-contact {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+nav .nav-logo-contact .logo img {
+  height: 75px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%) contrast(105%);
+}
+nav .nav-logo-contact .logo img:hover {
+  transform: scale(1.03);
+  transform-origin: center;
+  transition: 250ms transform cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+nav .nav-logo-contact .contact {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: right;
+}
+nav .nav-logo-contact .contact .number {
+  font-size: 0.95rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #fff;
+}
+nav .nav-logo-contact .contact .number i {
+  margin-right: 0.25rem;
+  color: hsl(39, 52%, 64%);
+}
+nav .nav-logo-contact .contact .btn {
+  font-size: 0.85rem;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 3rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #2e2e29;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fff;
+}
+nav ul li a i {
+  margin-right: 0.5rem;
+  color: hsl(39, 52%, 64%);
+}
+
+#hero-image {
+  z-index: -9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/hero-background.webp");
+  background-color: hsl(0, 0%, 7%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#cta {
+  height: calc(100vh - 151px); /* nav height */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+#cta h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 3px rgba(18, 18, 18, 0.3);
+}
+#cta h3 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 3px rgba(18, 18, 18, 0.3);
+}
+#cta .btn {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 700;
+  letter-spacing: 2px;
+}
+
+#services {
+  width: 100%;
+  height: 885px; /* placeholder */
+  background-color: rgba(18, 18, 18, 0.75);
+  color: hsl(60, 5%, 19%);
+}
+
+#why-us {
+  width: 100%;
+  height: 450px; /* placeholder */
+  background-color: hsl(39, 52%, 64%);
+  color: hsl(60, 5%, 19%);
+}/*# sourceMappingURL=styles.css.map */
