@@ -126,6 +126,11 @@ nav ul li a {
   letter-spacing: 2px;
   color: #fff;
 }
+nav ul li a:hover > i {
+  transform: rotate(360deg);
+  transform-origin: center;
+  transition: 250ms transform ease;
+}
 nav ul li a i {
   margin-right: 0.5rem;
   color: hsl(39, 52%, 64%);
@@ -181,7 +186,7 @@ nav ul li a i {
   color: hsl(60, 5%, 19%);
 }
 
-#why-us {
+#why-new-point {
   width: 100%;
   height: 450px; /* placeholder */
   background-color: hsl(39, 52%, 64%);
