@@ -149,3 +149,15 @@ nav {
     background-color: $color-secondary;
     color: $color-primary;
 }
+
+ul {
+    @media (hover) and (prefers-reduced-motion: no-preference) {
+        & > li {
+            transition: opacity 0.3s ease;
+        }
+
+        &:is(:hover, :focus-within) > li:not(:hover, :focus-within) {
+            opacity: 0.25;
+        }
+    }
+}

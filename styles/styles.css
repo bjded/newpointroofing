@@ -191,4 +191,13 @@ nav ul li a i {
   height: 450px; /* placeholder */
   background-color: hsl(39, 52%, 64%);
   color: hsl(60, 5%, 19%);
+}
+
+@media (hover) and (prefers-reduced-motion: no-preference) {
+  ul > li {
+    transition: opacity 0.3s ease;
+  }
+  ul:is(:hover, :focus-within) > li:not(:hover, :focus-within) {
+    opacity: 0.25;
+  }
 }/*# sourceMappingURL=styles.css.map */
