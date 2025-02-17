@@ -193,6 +193,11 @@ nav ul li a i {
   color: hsl(60, 5%, 19%);
 }
 
+#spacer {
+  height: 3000px;
+  background-color: greenyellow;
+}
+
 @media (hover) and (prefers-reduced-motion: no-preference) {
   ul > li {
     transition: opacity 0.3s ease;
