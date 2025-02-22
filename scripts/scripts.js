@@ -27,5 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 document.addEventListener("DOMContentLoaded", function () {
     //console.log("ready!");
 
-    AOS.init();
+    AOS.init({
+        once: true,
+    });
 });

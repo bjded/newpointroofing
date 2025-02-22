@@ -14,7 +14,8 @@ $font-awesome: "Font Awesome 6 Free";
 
 // Variable Settings
 $nav-height: 151px;
-$nav-width: 1024px;
+$nav-width: 1200px; /*1024px;*/
+$content-max-width: 1200px;
 $container-padding: 4rem;
 
 // Reset
@@ -35,6 +36,14 @@ body {
 // Generic
 .container {
     padding: $container-padding calc($container-padding / 2);
+}
+.container-heading {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.container-subheading {
+    font-size: 1.5rem;
+    text-align: center;
 }
 .row {
     padding: 1rem;
@@ -296,9 +305,42 @@ nav {
 // About Us
 #why-new-point {
     width: 100%;
-    height: 450px; /* placeholder */
     background-color: $color-secondary;
     color: $color-primary;
+    .whys {
+        max-width: calc($content-max-width - 0px);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 0 auto;
+        .why {
+            h3 {
+                margin-bottom: 0.5rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $color-primary;
+                &::before {
+                    content: "\2713";
+                    margin-right: 0.75rem;
+                    font-family: $font-awesome;
+                    font-weight: 900;
+                    color: $color-light;
+                }
+            }
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1.5;
+                color: $color-primary;
+            }
+        }
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    .container-heading {
+        margin-bottom: 1.5rem;
+    }
 }
 
 // Stats
