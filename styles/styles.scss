@@ -13,7 +13,7 @@ $font-primary: "Roboto", serif;
 $font-awesome: "Font Awesome 6 Free";
 
 // Variable Settings
-$nav-height: 151px;
+$nav-height: 153.77px;
 $nav-width: 1200px; /*1024px;*/
 $content-max-width: 1200px;
 $container-padding: 4rem;
@@ -160,7 +160,7 @@ nav {
             gap: 0.6rem;
             text-align: right;
             .number {
-                font-size: 0.95rem;
+                font-size: 1.1rem;
                 text-decoration: none;
                 letter-spacing: 1px;
                 color: #fff;
@@ -170,7 +170,7 @@ nav {
                 }
             }
             .btn {
-                font-size: 0.85rem;
+                font-size: 0.95rem;
             }
         }
     }
@@ -188,7 +188,7 @@ nav {
             display: inline-block;
             a {
                 display: block;
-                font-size: 0.85rem;
+                font-size: 1rem;
                 font-weight: 500;
                 text-decoration: none;
                 letter-spacing: 2px;
@@ -339,7 +339,7 @@ nav {
         }
     }
     .container-heading {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
     }
 }
 

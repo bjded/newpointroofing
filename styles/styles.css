@@ -138,7 +138,7 @@ nav .nav-logo-contact .contact {
   text-align: right;
 }
 nav .nav-logo-contact .contact .number {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   text-decoration: none;
   letter-spacing: 1px;
   color: #fff;
@@ -148,7 +148,7 @@ nav .nav-logo-contact .contact .number i {
   color: hsl(39, 52%, 64%);
 }
 nav .nav-logo-contact .contact .btn {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 nav ul {
   width: 100%;
@@ -166,7 +166,7 @@ nav ul li {
 }
 nav ul li a {
   display: block;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
   letter-spacing: 2px;
@@ -197,7 +197,7 @@ nav ul li a i {
 }
 
 #cta {
-  height: calc(100vh - 151px); /* nav height */
+  height: calc(100vh - 153.77px); /* nav height */
   display: grid;
   justify-content: center;
   align-items: center;
@@ -309,7 +309,7 @@ nav ul li a i {
   }
 }
 #why-new-point .container-heading {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 #stats {
