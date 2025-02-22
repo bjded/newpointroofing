@@ -11,6 +11,10 @@ body {
   font-family: "Roboto", serif;
 }
 
+.container {
+  padding: 4rem 2rem;
+}
+
 .row {
   padding: 1rem;
 }
@@ -22,7 +26,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(18, 18, 18, 0.3);
+  background-color: rgba(18, 18, 18, 0.35);
   z-index: 1;
 }
 
@@ -68,6 +72,22 @@ body {
   transition: 250ms all ease;
 }
 
+.btn-primary-arrow {
+  border: 1px solid hsl(39, 52%, 64%);
+  background-color: hsl(39, 52%, 64%);
+  color: hsl(60, 5%, 19%);
+}
+.btn-primary-arrow::after {
+  content: "\f061";
+  margin-left: 0.5rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.btn-primary-arrow:hover::after {
+  margin-left: 0.75rem;
+  transition: 125ms margin-left ease;
+}
+
 nav {
   z-index: 9999;
   position: sticky;
@@ -79,7 +99,7 @@ nav {
   align-items: center;
   padding: 1rem 0 0 0;
   background-color: hsl(60, 5%, 19%);
-  box-shadow: 0 2px 5px rgba(18, 18, 18, 0.3);
+  box-shadow: 0 2px 5px rgba(18, 18, 18, 0.35);
 }
 nav .nav-logo-contact {
   width: 100%;
@@ -175,14 +195,14 @@ nav ul li a i {
 #cta h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  text-shadow: 2px 2px 3px rgba(18, 18, 18, 0.3);
+  text-shadow: 2px 2px 3px rgba(18, 18, 18, 0.35);
 }
 #cta h2 {
   margin-top: 0.5rem;
   font-size: 1.5rem;
   font-weight: 500;
-  letter-spacing: 3%;
-  text-shadow: 2px 2px 3px rgba(18, 18, 18, 0.3);
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 3px rgba(18, 18, 18, 0.35);
 }
 #cta .btn {
   margin-top: 1.5rem;
@@ -195,20 +215,49 @@ nav ul li a i {
 #services {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
   background-color: rgba(18, 18, 18, 0.75);
 }
 #services .service {
-  min-height: 250px;
+  min-height: 300px;
+  position: relative;
   border-radius: 1rem;
-  padding: 1.5rem;
-  background-color: #fff;
+  padding: 4.5rem 1.5rem 1.5rem 1.5rem;
+  background-color: hsl(0, 0%, 100%);
 }
 #services .service h3 {
   font-size: 2rem;
   font-weight: 700;
-  color: #fff;
+  letter-spacing: 0.5px;
+  color: hsl(0, 0%, 100%);
+}
+#services .service p {
+  margin: 1rem 0;
+  font-size: 20px;
+  line-height: 1.5;
+  color: hsl(0, 0%, 100%);
+}
+#services .residential {
+  background-image: url("../images/service-residential.jpg");
+  background-color: hsl(0, 0%, 7%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#services .commercial {
+  background-image: url("../images/service-commercial.jpg");
+  background-color: hsl(0, 0%, 7%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#services .construction {
+  background-image: url("../images/service-construction.jpg");
+  background-color: hsl(0, 0%, 7%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #why-new-point {
