@@ -314,8 +314,29 @@ nav ul li a i {
 
 #stats {
   width: 100%;
-  height: 200px; /* placeholder */
   background-color: hsl(60, 5%, 19%);
+  text-align: center;
+}
+#stats .container {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+#stats .container .value {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+#stats .container .category {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   color: hsl(39, 52%, 64%);
 }
 
