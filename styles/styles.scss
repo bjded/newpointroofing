@@ -478,8 +478,8 @@ nav {
 // Contact
 #contact {
     width: 100%;
-    min-height: 665px;
-    background-color: red;
+    // min-height: 665px;
+    background-color: $color-light;
     .container {
         max-width: $content-width;
         margin: 0 auto;
@@ -487,22 +487,31 @@ nav {
         grid-template-columns: 1fr;
         justify-content: center;
         align-items: center;
-
+        .container-heading {
+            margin-bottom: 1rem;
+        }
         form {
-            display: grid;
-            grid-template-columns: 1fr;
             width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
             max-width: 700px;
             margin: 0 auto;
             border-radius: 1rem;
             padding: 2rem;
             background-color: $color-light;
             box-sizing: border-box;
+            box-shadow: 0 4px 4px $color-overlay;
             .form-group {
-                & + .form-group {
-                    margin-top: 1.5rem;
+                @media (max-width: 767px) {
+                    grid-column: 1 / -1;
                 }
-                input {
+                & + .full {
+                    grid-column: 1 / -1;
+                }
+                input,
+                select,
+                textarea {
                     width: 100%;
                     border: 1px solid #cfcfcd;
                     border-radius: 0.5rem;
@@ -516,6 +525,27 @@ nav {
                         color: #a2a9b4;
                     }
                 }
+                select {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    cursor: pointer;
+
+                    // dropdown arrow
+                    background-image: url("../images/plus-solid.svg");
+                    background-repeat: no-repeat;
+                    background-position: right 1rem center;
+                    background-size: 1rem;
+                    padding-right: 2.5rem;
+                }
+                textarea {
+                    height: 120px;
+                }
+            }
+            .btn {
+                width: 50%;
+                grid-column: 1 / -1;
+                margin: 0 auto;
             }
         }
     }

@@ -438,8 +438,7 @@ nav ul li a i {
 
 #contact {
   width: 100%;
-  min-height: 665px;
-  background-color: red;
+  background-color: hsl(0, 0%, 100%);
 }
 #contact .container {
   max-width: 1200px;
@@ -449,21 +448,33 @@ nav ul li a i {
   justify-content: center;
   align-items: center;
 }
+#contact .container .container-heading {
+  margin-bottom: 1rem;
+}
 #contact .container form {
-  display: grid;
-  grid-template-columns: 1fr;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
   max-width: 700px;
   margin: 0 auto;
   border-radius: 1rem;
   padding: 2rem;
   background-color: hsl(0, 0%, 100%);
   box-sizing: border-box;
+  box-shadow: 0 4px 4px rgba(18, 18, 18, 0.25);
 }
-#contact .container form .form-group + .form-group {
-  margin-top: 1.5rem;
+@media (max-width: 767px) {
+  #contact .container form .form-group {
+    grid-column: 1/-1;
+  }
 }
-#contact .container form .form-group input {
+#contact .container form .form-group + .full {
+  grid-column: 1/-1;
+}
+#contact .container form .form-group input,
+#contact .container form .form-group select,
+#contact .container form .form-group textarea {
   width: 100%;
   border: 1px solid #cfcfcd;
   border-radius: 0.5rem;
@@ -474,11 +485,32 @@ nav ul li a i {
   letter-spacing: 0.25px;
   color: #a2a9b4;
 }
-#contact .container form .form-group input::-moz-placeholder {
+#contact .container form .form-group input::-moz-placeholder, #contact .container form .form-group select::-moz-placeholder, #contact .container form .form-group textarea::-moz-placeholder {
   color: #a2a9b4;
 }
-#contact .container form .form-group input::placeholder {
+#contact .container form .form-group input::placeholder,
+#contact .container form .form-group select::placeholder,
+#contact .container form .form-group textarea::placeholder {
   color: #a2a9b4;
+}
+#contact .container form .form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background-image: url("../images/plus-solid.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+#contact .container form .form-group textarea {
+  height: 120px;
+}
+#contact .container form .btn {
+  width: 50%;
+  grid-column: 1/-1;
+  margin: 0 auto;
 }
 
 #footer {
