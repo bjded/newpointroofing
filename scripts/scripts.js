@@ -25,9 +25,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Document Ready
 document.addEventListener("DOMContentLoaded", function () {
-    //console.log("ready!");
-
-    AOS.init({
-        once: true,
-    });
+    // AOS init
+    if (window.innerWidth <= 991) {
+        AOS.init({ disable: true });
+    } else {
+        AOS.init();
+    }
 });

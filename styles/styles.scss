@@ -85,7 +85,7 @@ body {
 .btn {
     display: inline-block;
     font-size: 1rem;
-    padding: 0.6rem 1.1rem;
+    padding: 0.5rem 1rem;
     border-radius: 0.3rem;
     cursor: pointer;
     background-color: $color-neutral;
@@ -170,9 +170,9 @@ nav {
         .logo {
             img {
                 height: 75px;
-                filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
-                    saturate(0%) hue-rotate(82deg) brightness(105%)
-                    contrast(105%);
+                // filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+                //     saturate(0%) hue-rotate(82deg) brightness(105%)
+                //     contrast(105%);
                 &:hover {
                     transform: scale(1.03);
                     transform-origin: center;
@@ -303,6 +303,7 @@ nav {
                 color: $color-light;
             }
             p {
+                min-height: 90px;
                 margin: 1rem 0;
                 font-size: 20px;
                 line-height: 1.5;
@@ -534,11 +535,14 @@ nav {
             border: 2px solid rgba(#b49761, 16%);
             z-index: 1;
             animation: float 8s infinite ease-in-out alternate;
+            @media (max-width: 991px) {
+                display: none;
+            }
             &:nth-of-type(1) {
                 width: 50px;
                 height: 50px;
                 top: 110px;
-                left: 25px;
+                left: 100px;
                 --rotation: 60deg;
                 transform: --rotation;
             }
@@ -556,7 +560,7 @@ nav {
                 width: 60px;
                 height: 60px;
                 top: 475px;
-                left: 1100px;
+                left: 1025px;
                 --rotation: 77deg;
                 transform: rotate(77deg);
                 animation-duration: 9s;
@@ -630,10 +634,10 @@ nav {
                 width: 50%;
                 grid-column: 1 / -1;
                 margin: 0 auto;
-                // border: 2px solid $color-secondary;
-                // &:hover {
-                //     border: 2px solid $color-secondary;
-                // }
+                padding: 0.7rem 1.4rem;
+                font-size: 1.1rem;
+                font-weight: 700;
+                letter-spacing: 2px;
             }
         }
     }
