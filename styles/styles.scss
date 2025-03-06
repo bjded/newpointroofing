@@ -95,29 +95,40 @@ body {
     color: $color-dark;
 }
 .btn-primary {
-    border: 1px solid $color-secondary;
+    border: 2px solid $color-secondary;
     background-color: $color-secondary;
     color: $color-light;
     &:hover {
-        border: 1px solid $color-light;
+        border: 2px solid $color-light;
         background-color: $color-light;
         color: $color-secondary;
         transition: 250ms all ease;
     }
 }
 .btn-secondary {
-    border: 1px solid $color-secondary;
+    border: 2px solid $color-secondary;
     background-color: $color-primary;
     color: $color-light;
     &:hover {
-        border: 1px solid $color-secondary;
+        border: 2px solid $color-secondary;
         background-color: $color-secondary;
         color: $color-primary;
         transition: 250ms all ease;
     }
 }
+.btn-tertiary {
+    border: 2px solid $color-secondary;
+    background-color: $color-secondary;
+    color: $color-light;
+    &:hover {
+        border: 2px solid $color-secondary;
+        background-color: $color-light;
+        color: $color-secondary;
+        transition: 250ms all ease;
+    }
+}
 .btn-primary-arrow {
-    border: 1px solid $color-secondary;
+    border: 2px solid $color-secondary;
     background-color: $color-secondary;
     color: $color-primary;
     &::after {
@@ -264,7 +275,7 @@ nav {
         margin-top: 1.5rem;
         font-size: 1.1rem;
         padding: 0.7rem 1.4rem;
-        font-size: 700;
+        font-weight: 700;
         letter-spacing: 2px;
     }
 }
@@ -478,7 +489,10 @@ nav {
 // Contact
 #contact {
     width: 100%;
-    // min-height: 665px;
+    background-image: url("../images/contact-grid-10.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     background-color: $color-light;
     .container {
         max-width: $content-width;
@@ -486,11 +500,58 @@ nav {
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
-        align-items: center;
+        // align-items: center;
+        position: relative;
         .container-heading {
             margin-bottom: 1rem;
         }
+        .square {
+            position: absolute;
+            background-color: rgba(#d3b172, 8%);
+            border: 2px solid rgba(#b49761, 16%);
+            z-index: 1;
+            animation: float 8s infinite ease-in-out alternate;
+            &:nth-of-type(1) {
+                width: 50px;
+                height: 50px;
+                top: 110px;
+                left: 25px;
+                --rotation: 60deg;
+                transform: --rotation;
+            }
+            &:nth-of-type(2) {
+                width: 100px;
+                height: 100px;
+                top: 400px;
+                left: 70px;
+                --rotation: 67deg;
+                transform: rotate(67deg);
+                animation-duration: 10s;
+                animation-delay: 333ms;
+            }
+            &:nth-of-type(3) {
+                width: 60px;
+                height: 60px;
+                top: 475px;
+                left: 1100px;
+                --rotation: 77deg;
+                transform: rotate(77deg);
+                animation-duration: 9s;
+                animation-delay: 667ms;
+            }
+            &:nth-of-type(4) {
+                width: 100px;
+                height: 100px;
+                top: 100px;
+                left: 1025px;
+                --rotation: 111deg;
+                transform: rotate(111deg);
+                animation-duration: 7s;
+                animation-delay: 1000ms;
+            }
+        }
         form {
+            z-index: 2;
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -546,6 +607,10 @@ nav {
                 width: 50%;
                 grid-column: 1 / -1;
                 margin: 0 auto;
+                // border: 2px solid $color-secondary;
+                // &:hover {
+                //     border: 2px solid $color-secondary;
+                // }
             }
         }
     }
@@ -560,7 +625,7 @@ nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 0.66rem;
+        gap: 0.5rem;
         padding: 2rem 1rem;
         text-align: center;
         img {
@@ -572,14 +637,50 @@ nav {
             display: block;
             font-size: 1.5rem;
             text-decoration: none;
+            letter-spacing: 1px;
             color: $color-light;
+        }
+        .socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem;
+            i {
+                font-size: 2rem;
+                color: $color-light;
+                &:hover {
+                    transition: all 0.3s ease;
+                    color: $color-secondary;
+                }
+            }
+            .fa-instagram {
+                font-size: 2.3rem !important;
+            }
         }
         .copyright {
             font-size: 0.95rem;
             font-weight: 500;
-            letter-spacing: 0.25px;
+            letter-spacing: 0.5px;
             color: $color-secondary;
         }
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(var(--rotation));
+    }
+    25% {
+        transform: translate(10px, -15px) rotate(calc(var(--rotation) + 5deg));
+    }
+    50% {
+        transform: translate(-20px, 10px) rotate(calc(var(--rotation) - 5deg));
+    }
+    75% {
+        transform: translate(15px, 20px) rotate(calc(var(--rotation) + 3deg));
+    }
+    100% {
+        transform: translate(0, 0) rotate(var(--rotation));
     }
 }
 
