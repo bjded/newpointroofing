@@ -401,14 +401,38 @@ nav ul li a i {
 
 #reviews {
   width: 100%;
+  position: relative;
   background-color: hsl(39, 52%, 64%);
+}
+#reviews::before {
+  content: "";
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  top: -17.5px;
+  left: 0;
+  background-color: inherit;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+          clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+#reviews::after {
+  content: "";
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  bottom: -17.5px;
+  left: 0;
+  background-color: inherit;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+          clip-path: polygon(100% 0, 100% 100%, 0 50%);
 }
 #reviews .container {
   max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  margin: 0 auto;
+  padding-top: 2rem;
 }
 #reviews .container .review {
   border-radius: 1rem;
@@ -463,6 +487,7 @@ nav ul li a i {
   grid-template-columns: 1fr;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 #contact .container .container-heading {
   margin-bottom: 1rem;
@@ -486,7 +511,7 @@ nav ul li a i {
   width: 100px;
   height: 100px;
   top: 400px;
-  left: 70px;
+  left: 60px;
   --rotation: 67deg;
   transform: rotate(67deg);
   animation-duration: 10s;

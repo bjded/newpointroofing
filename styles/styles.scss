@@ -438,13 +438,35 @@ nav {
 // Client Reviews
 #reviews {
     width: 100%;
+    position: relative;
     background-color: $color-secondary;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 35px;
+        position: absolute;
+        top: -17.5px;
+        left: 0;
+        background-color: inherit;
+        clip-path: polygon(0 0, 0 100%, 100% 50%);
+    }
+    &::after {
+        content: "";
+        width: 100%;
+        height: 35px;
+        position: absolute;
+        bottom: -17.5px;
+        left: 0;
+        background-color: inherit;
+        clip-path: polygon(100% 0, 100% 100%, 0 50%);
+    }
     .container {
         max-width: $content-width;
-        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+        margin: 0 auto;
+        padding-top: 2rem;
         .review {
             border-radius: 1rem;
             padding: 1.5rem;
@@ -502,6 +524,7 @@ nav {
         justify-content: center;
         // align-items: center;
         position: relative;
+        overflow: hidden;
         .container-heading {
             margin-bottom: 1rem;
         }
@@ -523,7 +546,7 @@ nav {
                 width: 100px;
                 height: 100px;
                 top: 400px;
-                left: 70px;
+                left: 60px;
                 --rotation: 67deg;
                 transform: rotate(67deg);
                 animation-duration: 10s;
