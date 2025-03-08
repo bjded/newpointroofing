@@ -17,7 +17,7 @@
             <a href="#contact" class="btn btn-secondary">
                 <span>Schedule a </span>Free Inspection</a>
         </div>
-        <div id="mobile-toggle" class="open">
+        <div id="mobile-toggle">
             <!-- <i class="fa-solid fa-bars"></i> -->
             <div class="toggle-line"><span class="sr-only">line</span></div>
             <div class="toggle-line"><span class="sr-only">line</span></div>

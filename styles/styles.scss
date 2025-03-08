@@ -270,14 +270,23 @@ nav {
 
             &.open {
                 .toggle-line:nth-child(1) {
-                    background-color: red;
+                    transform: translateY(10px) rotate(45deg);
+                }
+                .toggle-line:nth-child(2) {
+                    transform: translateX(10px);
+                    opacity: 0; // Hide without affecting layout
+                }
+                .toggle-line:nth-child(3) {
+                    transform: translateY(-10px) rotate(-45deg);
                 }
             }
+
             .toggle-line {
                 width: 28px;
                 height: 3px;
                 border-radius: 3px;
                 background-color: $color-light;
+                transition: 250ms all ease;
                 & + .toggle-line {
                     margin-top: 7px;
                 }

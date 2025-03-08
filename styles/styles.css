@@ -230,13 +230,21 @@ nav .nav-logo-contact #mobile-toggle {
   }
 }
 nav .nav-logo-contact #mobile-toggle.open .toggle-line:nth-child(1) {
-  background-color: red;
+  transform: translateY(10px) rotate(45deg);
+}
+nav .nav-logo-contact #mobile-toggle.open .toggle-line:nth-child(2) {
+  transform: translateX(10px);
+  opacity: 0;
+}
+nav .nav-logo-contact #mobile-toggle.open .toggle-line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
 }
 nav .nav-logo-contact #mobile-toggle .toggle-line {
   width: 28px;
   height: 3px;
   border-radius: 3px;
   background-color: hsl(0, 0%, 100%);
+  transition: 250ms all ease;
 }
 nav .nav-logo-contact #mobile-toggle .toggle-line + .toggle-line {
   margin-top: 7px;
