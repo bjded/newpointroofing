@@ -3,7 +3,7 @@
 <nav aria-label="Main Navigation">
     <div class="nav-logo-contact">
         <div class="logo">
-            <a href="index.php" tabindex="-1">
+            <a href="/p/npr" tabindex="-1">
                 <img
                     src="images/new-point-roofing-logo.svg"
                     alt="new point company logo" />
@@ -53,22 +53,22 @@
             </li>
         <?php else : ?>
             <li>
-                <a href="/" title="Back to Home" class="back"><i class="fa-solid fa-left-long"></i>Back</a>
+                <a href="/p/npr" title="Back to Home" class="back"><i class="fa-solid fa-left-long"></i>Back</a>
             </li>
             <li>
-                <a href="/residential" title="Residential" class="<?= $page_title == "Residential" ? "active" : ""; ?>">
+                <a href="residential" title="Residential" class="<?= $page_title == "Residential" ? "active" : ""; ?>">
                     <i class="fa-solid fa-house-chimney"></i>
                     Residential
                 </a>
             </li>
             <li>
-                <a href="/commercial" title="Commercial" class="<?= $page_title == "Commercial" ? "active" : ""; ?>">
+                <a href="commercial" title="Commercial" class="<?= $page_title == "Commercial" ? "active" : ""; ?>">
                     <i class="fa-solid fa-building"></i>
                     Commercial
                 </a>
             </li>
             <li>
-                <a href="/construction" title="Construction" class="<?= $page_title == "Construction" ? "active" : ""; ?>">
+                <a href="construction" title="Construction" class="<?= $page_title == "Construction" ? "active" : ""; ?>">
                     <i class="fa-solid fa-hammer"></i>
                     Construction
                 </a>

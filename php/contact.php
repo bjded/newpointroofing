@@ -12,7 +12,7 @@
                     type="text"
                     name="full-name"
                     id="full-name"
-                    placeholder="Full Name" />
+                    placeholder="Full Name" required />
             </div>
             <div class="form-group">
                 <label for="email-address"><span class="sr-only">Email Address</span></label>
@@ -20,7 +20,7 @@
                     type="email"
                     name="email-address"
                     id="email-address"
-                    placeholder="Email Address" />
+                    placeholder="Email Address" required />
             </div>
             <div class="form-group">
                 <label for="phone-number"><span class="sr-only">Phone Number</span></label>
@@ -28,7 +28,7 @@
                     type="text"
                     name="phone-number"
                     id="phone-number"
-                    placeholder="Phone Number" />
+                    placeholder="Phone Number" required />
             </div>
             <div class="form-group">
                 <label for="address"><span class="sr-only">Address</span></label>
@@ -36,12 +36,12 @@
                     type="text"
                     name="address"
                     id="address"
-                    placeholder="Address" />
+                    placeholder="Address" required />
             </div>
             <div class="form-group full">
                 <label for="choose-service"><span class="sr-only">Choose Service</span></label>
                 <select name="choose-service" id="choose-service">
-                    <option value="default">Choose Service</option>
+                    <option value="residential">Choose Service</option>
                     <option value="residential">Residential</option>
                     <option value="commercial">Commercial</option>
                     <option value="construction">Construction</option>
@@ -52,7 +52,7 @@
                 <textarea
                     name="your-message"
                     id="your-message"
-                    placeholder="Your Message"></textarea>
+                    placeholder="Your Message" required></textarea>
             </div>
             <div class="form-group full">
                 <div class="cf-turnstile" data-sitekey="0x4AAAAAAABTJEv3gIusabvT" data-callback="javascriptCallback" data-theme="light"></div>

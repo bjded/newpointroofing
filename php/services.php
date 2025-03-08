@@ -9,7 +9,7 @@
                 Premium roofing solutions for your home, offering
                 durability, style, and lasting protection.
             </p>
-            <a href="/residential" class="btn btn-primary-arrow">Learn More</a>
+            <a href="residential" class="btn btn-primary-arrow">Learn More</a>
         </div>
         <div
             data-aos="fade-up"
@@ -21,7 +21,7 @@
                 Expert roofing services for businesses, providing
                 reliable, efficient, and long-lasting solutions.
             </p>
-            <a href="/commercial" class="btn btn-primary-arrow">Learn More</a>
+            <a href="commercial" class="btn btn-primary-arrow">Learn More</a>
         </div>
         <div
             data-aos="fade-left"
@@ -33,7 +33,7 @@
                 Full-service construction for projects of any size.
                 Quality work, guaranteed.
             </p>
-            <a href="/construction" class="btn btn-primary-arrow">Learn More</a>
+            <a href="construction" class="btn btn-primary-arrow">Learn More</a>
         </div>
     </div>
 </section>
