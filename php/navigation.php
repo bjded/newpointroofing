@@ -3,7 +3,7 @@
 <nav aria-label="Main Navigation">
     <div class="nav-logo-contact">
         <div class="logo">
-            <a href="/p/npr" tabindex="-1">
+            <a href="/" tabindex="-1">
                 <img
                     src="images/new-point-roofing-logo.svg"
                     alt="new point company logo" />
@@ -15,8 +15,13 @@
                 (817) 993-9016
             </a>
             <a href="#contact" class="btn btn-secondary">
-                Schedule a Free Inspection
-            </a>
+                <span>Schedule a </span>Free Inspection</a>
+        </div>
+        <div id="mobile-toggle" class="open">
+            <!-- <i class="fa-solid fa-bars"></i> -->
+            <div class="toggle-line"><span class="sr-only">line</span></div>
+            <div class="toggle-line"><span class="sr-only">line</span></div>
+            <div class="toggle-line"><span class="sr-only">line</span></div>
         </div>
     </div>
     <ul>
@@ -53,7 +58,7 @@
             </li>
         <?php else : ?>
             <li>
-                <a href="/p/npr" title="Back to Home" class="back"><i class="fa-solid fa-left-long"></i>Back</a>
+                <a href="/" title="Back to Home" class="back"><i class="fa-solid fa-left-long"></i>Back</a>
             </li>
             <li>
                 <a href="residential" title="Residential" class="<?= $page_title == "Residential" ? "active" : ""; ?>">

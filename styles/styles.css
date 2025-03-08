@@ -66,6 +66,13 @@ body {
   visibility: hidden;
 }
 
+.mobile-menu-display {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transition: 250ms all ease;
+}
+
 .text-content .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -161,7 +168,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0 0 0;
   background-color: hsl(60, 5%, 19%);
   box-shadow: 0 2px 5px rgba(18, 18, 18, 0.25);
 }
@@ -172,7 +178,12 @@ nav .nav-logo-contact {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 0 1rem;
+  padding: 1rem;
+}
+@media (max-width: 991px) {
+  nav .nav-logo-contact {
+    padding: 1rem 1.5rem;
+  }
 }
 nav .nav-logo-contact .logo img {
   height: 75px;
@@ -188,6 +199,11 @@ nav .nav-logo-contact .contact {
   gap: 0.6rem;
   text-align: right;
 }
+@media (max-width: 991px) {
+  nav .nav-logo-contact .contact {
+    display: none;
+  }
+}
 nav .nav-logo-contact .contact .number {
   font-size: 1.1rem;
   text-decoration: none;
@@ -201,6 +217,34 @@ nav .nav-logo-contact .contact .number i {
 nav .nav-logo-contact .contact .btn {
   font-size: 0.95rem;
 }
+nav .nav-logo-contact #mobile-toggle {
+  display: none;
+  border: 1px solid hsl(39, 52%, 64%);
+  border-radius: 6px;
+  padding: 0.65rem;
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  nav .nav-logo-contact #mobile-toggle {
+    display: block;
+  }
+}
+nav .nav-logo-contact #mobile-toggle.open .toggle-line:nth-child(1) {
+  background-color: red;
+}
+nav .nav-logo-contact #mobile-toggle .toggle-line {
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: hsl(0, 0%, 100%);
+}
+nav .nav-logo-contact #mobile-toggle .toggle-line + .toggle-line {
+  margin-top: 7px;
+}
+nav .nav-logo-contact #mobile-toggle i {
+  font-size: 1.75rem;
+  color: hsl(0, 0%, 100%);
+}
 nav ul {
   width: 100%;
   display: flex;
@@ -208,9 +252,20 @@ nav ul {
   align-items: center;
   list-style-type: none;
   gap: 2rem;
-  margin-top: 1rem;
   padding: 0.75rem 1rem;
   background-color: #2e2e29;
+}
+@media (max-width: 991px) {
+  nav ul {
+    display: unset;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 110.89px;
+    left: 0;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
 }
 nav ul li {
   display: inline-block;
@@ -222,6 +277,11 @@ nav ul li a {
   text-decoration: none;
   letter-spacing: 2px;
   color: #fff;
+}
+@media (max-width: 991px) {
+  nav ul li a {
+    font-size: 1.25rem;
+  }
 }
 nav ul li a:hover > i {
   transform: rotate(360deg);
@@ -290,6 +350,11 @@ nav ul li .back {
   align-items: center;
   text-align: center;
   color: hsl(0, 0%, 100%);
+}
+@media (max-width: 991px) {
+  #cta {
+    height: calc(100vh - 110.89px);
+  }
 }
 #cta h1 {
   font-size: 3.5rem;
