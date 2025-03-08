@@ -1,0 +1,52 @@
+[
+    {
+        "person": "Michael Harris",
+        "comment": "The roofing team did an outstanding job on my home! Very professional and efficient.",
+        "stars": 5
+    },
+    {
+        "person": "Olivia Clark",
+        "comment": "Great service, and the project was completed smoothly and on time.",
+        "stars": 4
+    },
+    {
+        "person": "Liam Turner",
+        "comment": "Excellent roofing installation! I’m very pleased with the work and would definitely hire them again for future projects.",
+        "stars": 5
+    },
+    {
+        "person": "Sophia Adams",
+        "comment": "The commercial roofing work was done professionally, and communication was clear throughout the process.",
+        "stars": 4
+    },
+    {
+        "person": "Ethan Walker",
+        "comment": "Fast and efficient service! The project was completed ahead of schedule, and the quality was top-notch.",
+        "stars": 5
+    },
+    {
+        "person": "Ava Young",
+        "comment": "The roofing service was excellent, and the team ensured everything was in perfect order before finishing.",
+        "stars": 4
+    },
+    {
+        "person": "William King",
+        "comment": "Replaced the roof on my office building—everything looks fantastic, and the crew was very professional.",
+        "stars": 5
+    },
+    {
+        "person": "Isabella Scott",
+        "comment": "The roofing service was great, and the team was very thorough and detail-oriented in their work.",
+        "stars": 4
+    },
+    {
+        "person": "James Wright",
+        "comment": "My roof looks amazing, and the crew was professional from start to finish. Highly recommended!",
+        "stars": 5
+    },
+    {
+        "person": "Mia Robinson",
+        "comment": "The roof on my home looks great, and I’m happy with the overall service provided.",
+        "stars": 4
+    }
+]

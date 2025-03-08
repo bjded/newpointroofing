@@ -66,6 +66,27 @@ body {
   visibility: hidden;
 }
 
+.text-content .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.text-content .container h2 {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  border-bottom: 4px solid hsl(39, 52%, 64%);
+  border-left: 4px solid hsl(39, 52%, 64%);
+  padding: 0 0 0.25rem 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(60, 5%, 19%);
+}
+.text-content .container p {
+  margin-bottom: 1rem;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 .btn {
   display: inline-block;
   font-size: 1rem;
@@ -211,6 +232,13 @@ nav ul li a i {
   margin-right: 0.5rem;
   color: hsl(39, 52%, 64%);
 }
+nav ul li .active {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+nav ul li .back {
+  color: hsl(39, 52%, 64%) !important;
+}
 
 #hero-image {
   z-index: -9999;
@@ -224,6 +252,35 @@ nav ul li a i {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#page-banner {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  background-color: hsl(0, 0%, 7%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 2.25rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.residential {
+  background-image: url("../images/service-residential.jpg");
+}
+
+.commercial {
+  background-image: url("../images/service-commercial.jpg");
+}
+
+.construction {
+  background-image: url("../images/service-construction.jpg");
 }
 
 #cta {
@@ -674,7 +731,7 @@ nav ul li a i {
   border-radius: 0.5rem;
   background-color: hsl(60, 5%, 19%);
   text-decoration: none;
-  color: hsl(39, 52%, 64%);
+  color: hsl(0, 0%, 100%);
   transition: 250ms all ease;
 }
 #scroll-to-top i {

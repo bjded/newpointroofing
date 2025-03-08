@@ -1,7 +1,16 @@
-// Smooth Scroll
+function clearActiveNav() {
+    document.querySelectorAll("nav ul li a").forEach((navItem) => {
+        navItem.classList.remove("active");
+    });
+}
+
+// Anchor smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
+
+        clearActiveNav();
+        this.classList.add("active");
 
         const targetId = this.getAttribute("href");
         const targetElement = document.querySelector(targetId);
