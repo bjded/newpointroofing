@@ -4,4 +4,10 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
 
+<!-- Cloudflare Turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async></script>
+
+<!-- Lightbox -->
+<script src="scripts/fslightbox.js"></script>
+
 <script src="scripts/scripts.js"></script>

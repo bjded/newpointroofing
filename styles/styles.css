@@ -449,12 +449,33 @@ nav ul li .back {
   align-items: center;
   border-radius: 1rem;
   height: 275px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: hsl(0, 0%, 96%);
 }
 #showcase .container .image:hover .btn {
   opacity: 1;
   visibility: visible;
   transition: 500ms all ease;
+}
+#showcase .container .image:nth-of-type(1) {
+  background-image: url("../images/showcase/showcase1.png");
+}
+#showcase .container .image:nth-of-type(2) {
+  background-image: url("../images/showcase/showcase4.png");
+}
+#showcase .container .image:nth-of-type(3) {
+  background-image: url("../images/showcase/showcase5.png");
+}
+#showcase .container .image:nth-of-type(4) {
+  background-image: url("../images/showcase/showcase2.png");
+}
+#showcase .container .image:nth-of-type(5) {
+  background-image: url("../images/showcase/showcase3.png");
+}
+#showcase .container .image:nth-of-type(6) {
+  background-image: url("../images/showcase/showcase6.png");
 }
 #showcase .container .image .btn {
   opacity: 0;
@@ -561,7 +582,7 @@ nav ul li .back {
   z-index: 1;
   animation: float 8s infinite ease-in-out alternate;
 }
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   #contact .container .square {
     display: none;
   }
@@ -588,20 +609,20 @@ nav ul li .back {
   width: 60px;
   height: 60px;
   top: 475px;
-  left: 1025px;
+  right: 125px;
   --rotation: 77deg;
   transform: rotate(77deg);
-  animation-duration: 9s;
+  animation-duration: 8s;
   animation-delay: 667ms;
 }
 #contact .container .square:nth-of-type(4) {
   width: 100px;
   height: 100px;
   top: 100px;
-  left: 1025px;
+  right: 65px;
   --rotation: 111deg;
   transform: rotate(111deg);
-  animation-duration: 7s;
+  animation-duration: 10s;
   animation-delay: 1000ms;
 }
 #contact .container form {
@@ -626,7 +647,7 @@ nav ul li .back {
 #contact .container form .form-group + .full {
   grid-column: 1/-1;
 }
-#contact .container form .form-group input,
+#contact .container form .form-group input:not(input[type=submit]),
 #contact .container form .form-group select,
 #contact .container form .form-group textarea {
   width: 100%;
@@ -639,10 +660,10 @@ nav ul li .back {
   letter-spacing: 0.25px;
   color: #a2a9b4;
 }
-#contact .container form .form-group input::-moz-placeholder, #contact .container form .form-group select::-moz-placeholder, #contact .container form .form-group textarea::-moz-placeholder {
+#contact .container form .form-group input:not(input[type=submit])::-moz-placeholder, #contact .container form .form-group select::-moz-placeholder, #contact .container form .form-group textarea::-moz-placeholder {
   color: #a2a9b4;
 }
-#contact .container form .form-group input::placeholder,
+#contact .container form .form-group input:not(input[type=submit])::placeholder,
 #contact .container form .form-group select::placeholder,
 #contact .container form .form-group textarea::placeholder {
   color: #a2a9b4;
@@ -660,6 +681,10 @@ nav ul li .back {
 }
 #contact .container form .form-group textarea {
   height: 120px;
+}
+#contact .container form .form-group .cf-turnstile {
+  max-width: 300px;
+  margin: 0 auto;
 }
 #contact .container form .btn {
   width: 50%;

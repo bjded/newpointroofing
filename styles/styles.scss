@@ -483,6 +483,9 @@ nav {
             align-items: center;
             border-radius: 1rem;
             height: 275px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             background-color: $color-neutral;
             &:hover {
                 .btn {
@@ -490,6 +493,24 @@ nav {
                     visibility: visible;
                     transition: 500ms all ease;
                 }
+            }
+            &:nth-of-type(1) {
+                background-image: url("../images/showcase/showcase1.png");
+            }
+            &:nth-of-type(2) {
+                background-image: url("../images/showcase/showcase4.png");
+            }
+            &:nth-of-type(3) {
+                background-image: url("../images/showcase/showcase5.png");
+            }
+            &:nth-of-type(4) {
+                background-image: url("../images/showcase/showcase2.png");
+            }
+            &:nth-of-type(5) {
+                background-image: url("../images/showcase/showcase3.png");
+            }
+            &:nth-of-type(6) {
+                background-image: url("../images/showcase/showcase6.png");
             }
             .btn {
                 opacity: 0;
@@ -598,7 +619,7 @@ nav {
             border: 2px solid rgba(#b49761, 16%);
             z-index: 1;
             animation: float 8s infinite ease-in-out alternate;
-            @media (max-width: 991px) {
+            @media (max-width: 767px) {
                 display: none;
             }
             &:nth-of-type(1) {
@@ -623,20 +644,20 @@ nav {
                 width: 60px;
                 height: 60px;
                 top: 475px;
-                left: 1025px;
+                right: 125px;
                 --rotation: 77deg;
                 transform: rotate(77deg);
-                animation-duration: 9s;
+                animation-duration: 8s;
                 animation-delay: 667ms;
             }
             &:nth-of-type(4) {
                 width: 100px;
                 height: 100px;
                 top: 100px;
-                left: 1025px;
+                right: 65px;
                 --rotation: 111deg;
                 transform: rotate(111deg);
-                animation-duration: 7s;
+                animation-duration: 10s;
                 animation-delay: 1000ms;
             }
         }
@@ -660,7 +681,7 @@ nav {
                 & + .full {
                     grid-column: 1 / -1;
                 }
-                input,
+                input:not(input[type="submit"]),
                 select,
                 textarea {
                     width: 100%;
@@ -691,6 +712,10 @@ nav {
                 }
                 textarea {
                     height: 120px;
+                }
+                .cf-turnstile {
+                    max-width: 300px;
+                    margin: 0 auto;
                 }
             }
             .btn {

@@ -5,7 +5,7 @@
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
-        <form action="#" data-aos="fade-up" data-aos-duration="500">
+        <form action="php/form-submit.php" method="post" data-aos="fade-up" data-aos-duration="500">
             <div class="form-group">
                 <label for="full-name"><span class="sr-only">Full Name</span></label>
                 <input
@@ -17,7 +17,7 @@
             <div class="form-group">
                 <label for="email-address"><span class="sr-only">Email Address</span></label>
                 <input
-                    type="text"
+                    type="email"
                     name="email-address"
                     id="email-address"
                     placeholder="Email Address" />
@@ -54,7 +54,10 @@
                     id="your-message"
                     placeholder="Your Message"></textarea>
             </div>
-            <button class="btn btn-tertiary">Send a Message</button>
+            <div class="form-group full">
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAABTJEv3gIusabvT" data-callback="javascriptCallback" data-theme="light"></div>
+            </div>
+            <input type="submit" name="submit" id="submit" value="Send a Message" class="btn btn-tertiary">
         </form>
     </div>
 </section>
