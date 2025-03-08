@@ -61,6 +61,11 @@ body {
   border: 0;
 }
 
+.hide {
+  opacity: 0 !important;
+  visibility: hidden;
+}
+
 .btn {
   display: inline-block;
   font-size: 1rem;
@@ -655,6 +660,25 @@ nav ul li a i {
   font-weight: 500;
   letter-spacing: 0.5px;
   color: hsl(39, 52%, 64%);
+}
+
+#scroll-to-top {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  border-radius: 0.5rem;
+  background-color: hsl(60, 5%, 19%);
+  text-decoration: none;
+  color: hsl(39, 52%, 64%);
+  transition: 250ms all ease;
+}
+#scroll-to-top i {
+  font-size: 1.5rem;
 }
 
 @keyframes float {

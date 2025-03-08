@@ -25,10 +25,22 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Document Ready
 document.addEventListener("DOMContentLoaded", function () {
+    // Scroll to top
+    document.addEventListener("scroll", function () {
+        let scrollToTop = document.getElementById("scroll-to-top");
+        if (scrollY >= 50) {
+            scrollToTop.classList.remove("hide");
+        } else {
+            scrollToTop.classList.add("hide");
+        }
+    });
+
     // AOS init
     if (window.innerWidth <= 991) {
         AOS.init({ disable: true });
     } else {
-        AOS.init();
+        AOS.init({
+            once: true,
+        });
     }
 });

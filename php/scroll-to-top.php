@@ -1,0 +1,1 @@
+<a href="#home" id="scroll-to-top" class="hide"><i class="fa-solid fa-up-long"></i></a>
