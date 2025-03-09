@@ -404,13 +404,13 @@ nav {
     color: $color-light;
 }
 .residential {
-    background-image: url("../images/service-residential.jpg");
+    background-image: url("../images/service-residential.webp");
 }
 .commercial {
-    background-image: url("../images/service-commercial.jpg");
+    background-image: url("../images/service-commercial.webp");
 }
 .construction {
-    background-image: url("../images/service-construction.jpg");
+    background-image: url("../images/service-construction.webp");
 }
 .thank-you {
     background-image: url("../images/hero-background.webp");
@@ -486,21 +486,21 @@ nav {
             }
         }
         .residential {
-            background-image: url("../images/service-residential.jpg");
+            background-image: url("../images/service-residential.webp");
             background-color: hsl(0, 0%, 7%);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
         }
         .commercial {
-            background-image: url("../images/service-commercial.jpg");
+            background-image: url("../images/service-commercial.webp");
             background-color: hsl(0, 0%, 7%);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
         }
         .construction {
-            background-image: url("../images/service-construction.jpg");
+            background-image: url("../images/service-construction.webp");
             background-color: hsl(0, 0%, 7%);
             background-position: center center;
             background-repeat: no-repeat;
@@ -611,22 +611,22 @@ nav {
                 }
             }
             &:nth-of-type(1) {
-                background-image: url("../images/showcase/showcase1.png");
+                background-image: url("../images/showcase/showcase1.webp");
             }
             &:nth-of-type(2) {
-                background-image: url("../images/showcase/showcase4.png");
+                background-image: url("../images/showcase/showcase4.webp");
             }
             &:nth-of-type(3) {
-                background-image: url("../images/showcase/showcase5.png");
+                background-image: url("../images/showcase/showcase5.webp");
             }
             &:nth-of-type(4) {
-                background-image: url("../images/showcase/showcase2.png");
+                background-image: url("../images/showcase/showcase2.webp");
             }
             &:nth-of-type(5) {
-                background-image: url("../images/showcase/showcase3.png");
+                background-image: url("../images/showcase/showcase3.webp");
             }
             &:nth-of-type(6) {
-                background-image: url("../images/showcase/showcase6.png");
+                background-image: url("../images/showcase/showcase6.webp");
             }
             .btn {
                 opacity: 0;
