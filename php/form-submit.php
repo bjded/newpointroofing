@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST["submit"])) {
     $data = array(
-        'secret' => "0x4AAAAAAABTJPLgJdR3zaEQ87pHQt0MFTQ",
+        'secret' => "0x4AAAAAAA_-SM-Sa-czdetnavWVY37oD9g",
         'response' => $_POST['cf-turnstile-response']
     );
     $verify = curl_init();
@@ -23,7 +23,7 @@ if (isset($_POST["submit"])) {
         $message = $_POST['your-message'];
 
         // Format Email
-        $to = "bjdedushaj@gmail.com";
+        $to = "newpointroofing@yahoo.com";
         $subject = "New Point Roofing Contact Form";
         $message = "
                 <html>
@@ -42,7 +42,7 @@ if (isset($_POST["submit"])) {
             ";
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html; charset=UTF-8" . "\r\n";
-        $headers .= 'From: "New Point Roofing" <no-reply@ded-soft.com>' . "\r\n";
+        $headers .= 'From: "New Point Roofing" <no-reply@newpointroofing.net>' . "\r\n";
 
         mail($to, $subject, $message, $headers);
 

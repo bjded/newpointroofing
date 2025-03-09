@@ -56,7 +56,7 @@
             </div>
             <div class="form-group full">
                 <p class="disclaimer">This site is protected by Cloudflare Turnstile and its <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://www.cloudflare.com/website-terms/" target="_blank" rel="noopener">Terms of Use</a> apply.</p>
-                <div class="cf-turnstile" data-sitekey="0x4AAAAAAABTJEv3gIusabvT" data-callback="javascriptCallback"></div>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAA_-SEpJhq1T37mH" data-callback="javascriptCallback"></div>
             </div>
             <input type="submit" name="submit" id="submit" value="Send a Message" class="btn btn-tertiary">
         </form>
