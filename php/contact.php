@@ -40,11 +40,11 @@
             </div>
             <div class="form-group full">
                 <label for="choose-service"><span class="sr-only">Choose Service</span></label>
-                <select name="choose-service" id="choose-service">
+                <select name="choose-service" id="choose-service" required>
                     <option value="residential">Choose Service</option>
-                    <option value="residential">Residential</option>
-                    <option value="commercial">Commercial</option>
-                    <option value="construction">Construction</option>
+                    <option value="residential" <?= $page_title == "Residential" ? "selected" : "" ?>>Residential</option>
+                    <option value="commercial" <?= $page_title == "Commercial" ? "selected" : "" ?>>Commercial</option>
+                    <option value="construction" <?= $page_title == "Construction" ? "selected" : "" ?>>Construction</option>
                 </select>
             </div>
             <div class="form-group full">
@@ -55,7 +55,8 @@
                     placeholder="Your Message" required></textarea>
             </div>
             <div class="form-group full">
-                <div class="cf-turnstile" data-sitekey="0x4AAAAAAABTJEv3gIusabvT" data-callback="javascriptCallback" data-theme="light"></div>
+                <p class="disclaimer">This site is protected by Cloudflare Turnstile and its <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://www.cloudflare.com/website-terms/" target="_blank" rel="noopener">Terms of Use</a> apply.</p>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAABTJEv3gIusabvT" data-callback="javascriptCallback"></div>
             </div>
             <input type="submit" name="submit" id="submit" value="Send a Message" class="btn btn-tertiary">
         </form>

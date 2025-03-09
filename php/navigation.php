@@ -17,11 +17,16 @@
             <a href="#contact" class="btn btn-secondary">
                 <span>Schedule a </span>Free Inspection</a>
         </div>
-        <div id="mobile-toggle">
-            <!-- <i class="fa-solid fa-bars"></i> -->
-            <div class="toggle-line"><span class="sr-only">line</span></div>
-            <div class="toggle-line"><span class="sr-only">line</span></div>
-            <div class="toggle-line"><span class="sr-only">line</span></div>
+        <div class="mobile-group">
+            <a href="tel:8179939016" class="number">
+                <i class="fa-solid fa-phone"></i>
+                <span>(817) 993-9016</span>
+            </a>
+            <div id="mobile-toggle">
+                <div class="toggle-line"><span class="sr-only">line</span></div>
+                <div class="toggle-line"><span class="sr-only">line</span></div>
+                <div class="toggle-line"><span class="sr-only">line</span></div>
+            </div>
         </div>
     </div>
     <ul>
@@ -54,6 +59,13 @@
                 <a href="#contact" title="Contact Us">
                     <i class="fa-solid fa-paper-plane"></i>
                     Contact Us
+                </a>
+            </li>
+        <?php elseif ($page_title == "Thank You") : ?>
+            <li>
+                <a href="/" title="Home">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    Home
                 </a>
             </li>
         <?php else : ?>

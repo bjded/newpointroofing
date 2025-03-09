@@ -47,13 +47,13 @@ if (isset($_POST["submit"])) {
         mail($to, $subject, $message, $headers);
 
         // Redirect on success.
-        header('Location: ../?success');
+        header('Location: ../thank-you');
         exit();
     } else {
         header('Location: ../?error=tvf');
         exit();
     }
 } else {
-    header("Location: ../?nfs");
+    header("Location: ../?error=nfs");
     exit();
 }

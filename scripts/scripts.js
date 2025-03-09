@@ -46,7 +46,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 document.addEventListener("DOMContentLoaded", function () {
     // Nav mobile toggle
     mobileToggle = document.getElementById("mobile-toggle");
-
     mobileToggle.addEventListener("click", function () {
         mobileToggle.classList.toggle("open");
         document

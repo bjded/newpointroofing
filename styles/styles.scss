@@ -94,19 +94,6 @@ body {
     transition: 250ms all ease;
 }
 
-// .desktop-only {
-//     @media (max-width: 991px) {
-//         display: none;
-//     }
-// }
-
-// .mobile-only {
-//     display: none;
-//     @media (max-width: 991px) {
-//         display: inline-block;
-//     }
-// }
-
 // Text Content
 .text-content {
     .container {
@@ -147,7 +134,7 @@ body {
 .btn-primary {
     border: 2px solid $color-secondary;
     background-color: $color-secondary;
-    color: $color-light;
+    color: $color-primary;
     &:hover {
         border: 2px solid $color-light;
         background-color: $color-light;
@@ -169,7 +156,7 @@ body {
 .btn-tertiary {
     border: 2px solid $color-secondary;
     background-color: $color-secondary;
-    color: $color-light;
+    color: $color-primary;
     &:hover {
         border: 2px solid $color-secondary;
         background-color: $color-light;
@@ -257,43 +244,75 @@ nav {
                 font-size: 0.95rem;
             }
         }
-        #mobile-toggle {
+        .mobile-group {
             display: none;
-            border: 1px solid $color-secondary;
-            border-radius: 6px;
-            padding: 0.65rem;
-            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
 
             @media (max-width: 991px) {
-                display: block;
+                display: flex;
             }
-
-            &.open {
-                .toggle-line:nth-child(1) {
-                    transform: translateY(10px) rotate(45deg);
-                }
-                .toggle-line:nth-child(2) {
-                    transform: translateX(10px);
-                    opacity: 0; // Hide without affecting layout
-                }
-                .toggle-line:nth-child(3) {
-                    transform: translateY(-10px) rotate(-45deg);
-                }
+            @media (max-width: 575px) {
+                gap: 1rem;
             }
-
-            .toggle-line {
-                width: 28px;
-                height: 3px;
-                border-radius: 3px;
-                background-color: $color-light;
-                transition: 250ms all ease;
-                & + .toggle-line {
-                    margin-top: 7px;
-                }
-            }
-            i {
-                font-size: 1.75rem;
+            .number {
+                font-size: 1.3rem;
+                font-weight: 400;
                 color: $color-light;
+                text-decoration: none;
+                i {
+                    margin-right: 0.25rem;
+                    color: $color-secondary;
+
+                    @media (max-width: 575px) {
+                        font-size: 2rem;
+                    }
+                }
+                span {
+                    @media (max-width: 575px) {
+                        display: none;
+                    }
+                }
+            }
+            #mobile-toggle {
+                display: none;
+                border: 1px solid $color-secondary;
+                border-radius: 6px;
+                padding: 0.65rem;
+                cursor: pointer;
+
+                @media (max-width: 991px) {
+                    display: inline-block;
+                }
+
+                &.open {
+                    .toggle-line:nth-child(1) {
+                        transform: translateY(10px) rotate(45deg);
+                    }
+                    .toggle-line:nth-child(2) {
+                        transform: translateX(10px);
+                        opacity: 0; // Hide without affecting layout
+                    }
+                    .toggle-line:nth-child(3) {
+                        transform: translateY(-10px) rotate(-45deg);
+                    }
+                }
+
+                .toggle-line {
+                    width: 28px;
+                    height: 3px;
+                    border-radius: 3px;
+                    background-color: $color-light;
+                    transition: 250ms all ease;
+                    & + .toggle-line {
+                        margin-top: 7px;
+                    }
+                }
+                i {
+                    font-size: 1.75rem;
+                    color: $color-light;
+                }
             }
         }
     }
@@ -393,6 +412,9 @@ nav {
 .construction {
     background-image: url("../images/service-construction.jpg");
 }
+.thank-you {
+    background-image: url("../images/hero-background.webp");
+}
 
 // Call to Action
 #cta {
@@ -401,6 +423,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: rgba($color: #000000, $alpha: 0.01);
     color: hsl(0, 0%, 100%);
 
     @media (max-width: 991px) {
@@ -437,6 +460,10 @@ nav {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 2rem;
         margin: 0 auto;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
         .service {
             min-height: 300px;
             position: relative;
@@ -562,6 +589,10 @@ nav {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 2rem;
         margin: 0 auto;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
         .image {
             display: grid;
             justify-content: center;
@@ -777,7 +808,7 @@ nav {
                     font-family: $font-primary;
                     font-size: 1rem;
                     letter-spacing: 0.25px;
-                    color: #a2a9b4;
+                    color: $color-primary;
                     &::placeholder {
                         color: #a2a9b4;
                     }
@@ -798,9 +829,11 @@ nav {
                 textarea {
                     height: 120px;
                 }
-                .cf-turnstile {
-                    max-width: 300px;
-                    margin: 0 auto;
+                .disclaimer {
+                    font-size: 0.95rem;
+                    a {
+                        color: $color-primary;
+                    }
                 }
             }
             .btn {
@@ -903,15 +936,3 @@ nav {
         transform: translate(0, 0) rotate(var(--rotation));
     }
 }
-
-// ul {
-//     @media (hover) and (prefers-reduced-motion: no-preference) {
-//         & > li {
-//             transition: opacity 0.3s ease;
-//         }
-
-//         &:is(:hover, :focus-within) > li:not(:hover, :focus-within) {
-//             opacity: 0.25;
-//         }
-//     }
-// }

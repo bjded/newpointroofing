@@ -110,7 +110,7 @@ body {
 .btn-primary {
   border: 2px solid hsl(39, 52%, 64%);
   background-color: hsl(39, 52%, 64%);
-  color: hsl(0, 0%, 100%);
+  color: hsl(60, 5%, 19%);
 }
 .btn-primary:hover {
   border: 2px solid hsl(0, 0%, 100%);
@@ -134,7 +134,7 @@ body {
 .btn-tertiary {
   border: 2px solid hsl(39, 52%, 64%);
   background-color: hsl(39, 52%, 64%);
-  color: hsl(0, 0%, 100%);
+  color: hsl(60, 5%, 19%);
 }
 .btn-tertiary:hover {
   border: 2px solid hsl(39, 52%, 64%);
@@ -217,7 +217,43 @@ nav .nav-logo-contact .contact .number i {
 nav .nav-logo-contact .contact .btn {
   font-size: 0.95rem;
 }
-nav .nav-logo-contact #mobile-toggle {
+nav .nav-logo-contact .mobile-group {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 991px) {
+  nav .nav-logo-contact .mobile-group {
+    display: flex;
+  }
+}
+@media (max-width: 575px) {
+  nav .nav-logo-contact .mobile-group {
+    gap: 1rem;
+  }
+}
+nav .nav-logo-contact .mobile-group .number {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+nav .nav-logo-contact .mobile-group .number i {
+  margin-right: 0.25rem;
+  color: hsl(39, 52%, 64%);
+}
+@media (max-width: 575px) {
+  nav .nav-logo-contact .mobile-group .number i {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575px) {
+  nav .nav-logo-contact .mobile-group .number span {
+    display: none;
+  }
+}
+nav .nav-logo-contact .mobile-group #mobile-toggle {
   display: none;
   border: 1px solid hsl(39, 52%, 64%);
   border-radius: 6px;
@@ -225,31 +261,31 @@ nav .nav-logo-contact #mobile-toggle {
   cursor: pointer;
 }
 @media (max-width: 991px) {
-  nav .nav-logo-contact #mobile-toggle {
-    display: block;
+  nav .nav-logo-contact .mobile-group #mobile-toggle {
+    display: inline-block;
   }
 }
-nav .nav-logo-contact #mobile-toggle.open .toggle-line:nth-child(1) {
+nav .nav-logo-contact .mobile-group #mobile-toggle.open .toggle-line:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
 }
-nav .nav-logo-contact #mobile-toggle.open .toggle-line:nth-child(2) {
+nav .nav-logo-contact .mobile-group #mobile-toggle.open .toggle-line:nth-child(2) {
   transform: translateX(10px);
   opacity: 0;
 }
-nav .nav-logo-contact #mobile-toggle.open .toggle-line:nth-child(3) {
+nav .nav-logo-contact .mobile-group #mobile-toggle.open .toggle-line:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
-nav .nav-logo-contact #mobile-toggle .toggle-line {
+nav .nav-logo-contact .mobile-group #mobile-toggle .toggle-line {
   width: 28px;
   height: 3px;
   border-radius: 3px;
   background-color: hsl(0, 0%, 100%);
   transition: 250ms all ease;
 }
-nav .nav-logo-contact #mobile-toggle .toggle-line + .toggle-line {
+nav .nav-logo-contact .mobile-group #mobile-toggle .toggle-line + .toggle-line {
   margin-top: 7px;
 }
-nav .nav-logo-contact #mobile-toggle i {
+nav .nav-logo-contact .mobile-group #mobile-toggle i {
   font-size: 1.75rem;
   color: hsl(0, 0%, 100%);
 }
@@ -351,12 +387,17 @@ nav ul li .back {
   background-image: url("../images/service-construction.jpg");
 }
 
+.thank-you {
+  background-image: url("../images/hero-background.webp");
+}
+
 #cta {
   height: calc(100vh - 153.77px); /* nav height */
   display: grid;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.01);
   color: hsl(0, 0%, 100%);
 }
 @media (max-width: 991px) {
@@ -393,6 +434,11 @@ nav ul li .back {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  #services .container {
+    grid-template-columns: 1fr;
+  }
 }
 #services .container .service {
   min-height: 300px;
@@ -515,6 +561,11 @@ nav ul li .back {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  #showcase .container {
+    grid-template-columns: 1fr;
+  }
 }
 #showcase .container .image {
   display: grid;
@@ -731,7 +782,7 @@ nav ul li .back {
   font-family: "Roboto", serif;
   font-size: 1rem;
   letter-spacing: 0.25px;
-  color: #a2a9b4;
+  color: hsl(60, 5%, 19%);
 }
 #contact .container form .form-group input:not(input[type=submit])::-moz-placeholder, #contact .container form .form-group select::-moz-placeholder, #contact .container form .form-group textarea::-moz-placeholder {
   color: #a2a9b4;
@@ -755,9 +806,11 @@ nav ul li .back {
 #contact .container form .form-group textarea {
   height: 120px;
 }
-#contact .container form .form-group .cf-turnstile {
-  max-width: 300px;
-  margin: 0 auto;
+#contact .container form .form-group .disclaimer {
+  font-size: 0.95rem;
+}
+#contact .container form .form-group .disclaimer a {
+  color: hsl(60, 5%, 19%);
 }
 #contact .container form .btn {
   grid-column: 1/-1;
