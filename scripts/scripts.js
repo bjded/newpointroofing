@@ -1,6 +1,7 @@
 function clearActiveNav() {
     document.querySelectorAll("nav ul li a").forEach((navItem) => {
         navItem.classList.remove("active");
+        document.getElementById("mobile-toggle").classList.remove("open");
     });
 }
 
