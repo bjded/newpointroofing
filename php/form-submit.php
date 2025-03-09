@@ -1,7 +1,17 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 if (isset($_POST["submit"])) {
+    require 'PHPMailer/src/Exception.php';
+    require 'PHPMailer/src/PHPMailer.php';
+    require 'PHPMailer/src/SMTP.php';
+
+    require_once "env.php";
+
     $data = array(
-        'secret' => "0x4AAAAAAA_-SM-Sa-czdetnavWVY37oD9g",
+        'secret' => $turnstile_secret_key,
         'response' => $_POST['cf-turnstile-response']
     );
     $verify = curl_init();
@@ -12,43 +22,53 @@ if (isset($_POST["submit"])) {
     $response = curl_exec($verify);
     $response_data = json_decode($response);
 
-    // Turnstile Verification
     if ($response_data->success) {
-        // Data
-        $name = $_POST['full-name'];
-        $email = $_POST['email-address'];
-        $phone = $_POST['phone-number'];
-        $address = $_POST['address'];
-        $service = $_POST['choose-service'];
-        $message = $_POST['your-message'];
+        // Sanitized Data
+        $name = htmlspecialchars($_POST['full-name'], ENT_QUOTES, 'UTF-8');
+        $email = filter_var($_POST['email-address'], FILTER_SANITIZE_EMAIL);
+        $phone = htmlspecialchars($_POST['phone-number'], ENT_QUOTES, 'UTF-8');
+        $address = htmlspecialchars($_POST['address'], ENT_QUOTES, 'UTF-8');
+        $service = htmlspecialchars($_POST['choose-service'], ENT_QUOTES, 'UTF-8');
+        $your_message = htmlspecialchars($_POST['your-message'], ENT_QUOTES, 'UTF-8');
 
-        // Format Email
-        $to = "newpointroofing@yahoo.com";
-        $subject = "New Point Roofing Contact Form";
-        $message = "
+        $mail = new PHPMailer(true);
+
+        try {
+            $mail->isSMTP();
+            $mail->Host       = 'newpointroofing.net'; // Replace with your SMTP host
+            $mail->SMTPAuth   = false; // Set this to true if you require authentication
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use 'ssl' for SSL, 'tls' for TLS
+            $mail->Port       = 587; // 587 for TLS, 465 for SSL (check with your server)
+
+            $mail->setFrom('no-reply@newpointroofing.net', 'New Point Roofing'); // From
+            $mail->addAddress('bjdedushaj@yahoo.com'); // To
+
+            $mail->isHTML(true);
+            $mail->Subject = "New Point Roofing Contact Form";
+            $mail->Body    = "
                 <html>
                     <body>
-                        <h1>New Point Roofing</h1>
-                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Name: </span>" . $name . "</p>
-                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Email: </span>" . $email . "</p>
-                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Phone: </span>" . $phone . "</p>
-                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Address: </span>" . $address . "</p>
-                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Service: </span>" . $service . "</p>
-                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Message: </span>" . $message . "</p>
-                        <br>
-                        <p style='font-size: 16px;'>&copy; 2025 New Point Roofing, LLC</p>
+                        <h1>{$service} Request</h1>
+                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Name: </span>{$name}</p>
+                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Email: </span>{$email}</p>
+                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Phone: </span>{$phone}</p>
+                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Address: </span>{$address}</p>
+                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Service: </span>{$service}</p>
+                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Message: </span>{$your_message}</p>
                     </body>
                 </html>
             ";
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html; charset=UTF-8" . "\r\n";
-        $headers .= 'From: "New Point Roofing" <no-reply@newpointroofing.net>' . "\r\n";
 
-        mail($to, $subject, $message, $headers);
+            $mail->send();
 
-        // Redirect on success.
-        header('Location: ../thank-you');
-        exit();
+            // Redirect on success.
+            header('Location: ../thank-you');
+            exit();
+        } catch (Exception $e) {
+            error_log($e->getMessage()); // Log error to the server's error log
+            header('Location: ../?error=fsf');
+            exit();
+        }
     } else {
         header('Location: ../?error=tvf');
         exit();

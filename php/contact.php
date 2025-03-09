@@ -1,3 +1,7 @@
+<?php
+require_once "env.php";
+?>
+
 <section id="contact">
     <div class="container">
         <h2 class="container-heading">Contact Us</h2>
@@ -41,10 +45,10 @@
             <div class="form-group full">
                 <label for="choose-service"><span class="sr-only">Choose Service</span></label>
                 <select name="choose-service" id="choose-service" required>
-                    <option value="residential">Choose Service</option>
-                    <option value="residential" <?= $page_title == "Residential" ? "selected" : "" ?>>Residential</option>
-                    <option value="commercial" <?= $page_title == "Commercial" ? "selected" : "" ?>>Commercial</option>
-                    <option value="construction" <?= $page_title == "Construction" ? "selected" : "" ?>>Construction</option>
+                    <option value="Residential">Choose Service</option>
+                    <option value="Residential" <?= $page_title == "Residential" ? "selected" : "" ?>>Residential</option>
+                    <option value="Commercial" <?= $page_title == "Commercial" ? "selected" : "" ?>>Commercial</option>
+                    <option value="Construction" <?= $page_title == "Construction" ? "selected" : "" ?>>Construction</option>
                 </select>
             </div>
             <div class="form-group full">
@@ -56,7 +60,7 @@
             </div>
             <div class="form-group full">
                 <p class="disclaimer">This site is protected by Cloudflare Turnstile and its <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://www.cloudflare.com/website-terms/" target="_blank" rel="noopener">Terms of Use</a> apply.</p>
-                <div class="cf-turnstile" data-sitekey="0x4AAAAAAA_-SEpJhq1T37mH" data-callback="javascriptCallback"></div>
+                <div class="cf-turnstile" data-sitekey="<?= $turnstile_site_key; ?>" data-callback="javascriptCallback"></div>
             </div>
             <input type="submit" name="submit" id="submit" value="Send a Message" class="btn btn-tertiary">
         </form>

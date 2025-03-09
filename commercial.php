@@ -14,7 +14,7 @@ $page_banner_class = "commercial";
     <?php require_once "php/navigation.php"; ?>
     <?php require_once "php/page-banner.php"; ?>
 
-    <section class="text-content">
+    <section class="text-content" data-aos="fade-in" data-aos-duration="1000">
         <div class="container">
             <h2><?= $page_title; ?></h2>
             <p>At New Point Roofing, we specialize in roofing solutions for commercial properties, offering both new construction and ongoing maintenance services. As General Contractors, we oversee every phase of the project, ensuring that your roofing needs are met efficiently while you focus on running your business.</p>

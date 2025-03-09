@@ -14,7 +14,7 @@ $page_banner_class = "residential";
     <?php require_once "php/navigation.php"; ?>
     <?php require_once "php/page-banner.php"; ?>
 
-    <section class="text-content">
+    <section class="text-content" data-aos="fade-in" data-aos-duration="1000">
         <div class="container">
             <h2><?= $page_title; ?></h2>
             <p>At New Point Roofing, we specialize in storm damage restoration, ensuring your property is restored to its best condition. As General Contractors, we handle every detail of the project from start to finish, so you can focus on what matters while we take care of the insurance and construction process.</p>

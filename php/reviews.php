@@ -6,7 +6,7 @@ $selected_reviews = array_rand($reviews, 2);
 
 <section id="reviews">
     <div class="container">
-        <h2 class="container-heading">Recent Client Reviews</h2>
+        <h2 class="container-heading">Recent Reviews</h2>
         <?php foreach ($selected_reviews as $key => $index) : ?>
             <div
                 class="review"

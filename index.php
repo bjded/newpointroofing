@@ -1,4 +1,6 @@
-<?php $page_title = "Home"; ?>
+<?php
+$page_title = "Home";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
