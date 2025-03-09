@@ -40,8 +40,9 @@ if (isset($_POST["submit"])) {
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use 'ssl' for SSL, 'tls' for TLS
             $mail->Port       = 587; // 587 for TLS, 465 for SSL (check with your server)
 
+            $mail->addReplyTo($email, $name); // Reply-To
             $mail->setFrom('no-reply@newpointroofing.net', 'New Point Roofing'); // From
-            $mail->addAddress('bjdedushaj@yahoo.com'); // To
+            $mail->addAddress('newpointroofing@yahoo.com'); // To
 
             $mail->isHTML(true);
             $mail->Subject = "New Point Roofing Contact Form";
@@ -53,7 +54,7 @@ if (isset($_POST["submit"])) {
                         <p style='font-size: 18px;'><span style='font-weight: 600;'>Email: </span>{$email}</p>
                         <p style='font-size: 18px;'><span style='font-weight: 600;'>Phone: </span>{$phone}</p>
                         <p style='font-size: 18px;'><span style='font-weight: 600;'>Address: </span>{$address}</p>
-                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Service: </span>{$service}</p>
+                        <p style='font-size: 18px;'><span style='font-weight: 600;'>Requested Service: </span>{$service}</p>
                         <p style='font-size: 18px;'><span style='font-weight: 600;'>Message: </span>{$your_message}</p>
                     </body>
                 </html>
