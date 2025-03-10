@@ -2,19 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- SEO -->
-<meta name="description" content="New Point Roofing offers luxury residential and commercial roofing services with expert craftsmanship and premium materials. Serving clients with over 25 years of experience, we provide long-lasting, reliable roofing solutions.">
+<meta name="description" content="New Point Roofing offers luxury residential and commercial roofing services with expert craftsmanship and premium materials. We provide long-lasting, reliable roofing solutions.">
 <meta name="keywords" content="roofing, residential roofing, commercial roofing, construction services, luxury roofing, expert craftsmanship, durable roofing, high-quality materials, roofing solutions, Texas roofing">
 <meta name="robots" content="index, follow">
-
-<!-- OpenGraph -->
-<!-- <meta property="og:title" content="New Point Roofing - Luxury Roofing Services">
-<meta property="og:description" content="New Point Roofing provides high-quality residential and commercial roofing services in Texas with over 25 years of experience. Our roofing solutions are built to last, offering durability, aesthetic appeal, and unmatched craftsmanship.">
-<meta property="og:image" content="URL_to_logo_or_image">
-<meta property="og:url" content="https://newpointroofing.net/">
-<meta name="twitter:title" content="New Point Roofing - Expert Roofing Services">
-<meta name="twitter:description" content="Explore New Point Roofing for premium residential and commercial roofing solutions. Trusted craftsmanship and reliable protection for your home or business.">
-<meta name="twitter:image" content="URL_to_logo_or_image">
-<meta name="twitter:card" content="summary_large_image"> -->
 
 <title><?= !empty($page_title) ? $page_title : "Home"; ?> :: New Point Roofing, LLC | newpointroofing.net</title>
 
