@@ -529,7 +529,7 @@ nav ul li .back {
   text-align: center;
 }
 #stats .container {
-  max-width: 1200px;
+  max-width: 750px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

@@ -556,7 +556,7 @@ nav {
     background-color: $color-primary;
     text-align: center;
     .container {
-        max-width: $content-width;
+        max-width: calc($content-width - 450px);
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
